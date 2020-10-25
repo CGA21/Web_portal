@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-us" style="background-color:#5a5959;">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>SpaceShooter</title>
+    <link rel="shortcut icon" href="/images.png">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>  
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/SpaceShooter.json", {onProgress: UnityProgress});
+    </script>
+  </head>
+  <body>
+    <div class="webgl-content">
+      <div id="gameContainer" style="width:1000px; height: 600px"></div>
+      <div class="footer">
+	  <input type="button" value="Home" OnClick="Location:'../home.php'"></input>
+       <a style="font:arial;font-size:20px;padding-left:20px;"> Use W,A,S,D to move and Press Space to shoot</a>
+        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+        <div class="title">Space Shooter</div>
+      </div>
+    </div>
+  </body>
+</html>
